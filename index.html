@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PIP-BOY 3000 // PERSONAL TERMINAL</title>
+  <meta name="description" content="Personal portfolio — RobCo Industries Pip-Boy 3000 terminal interface." />
+  <meta property="og:title" content="PIP-BOY 3000 // PERSONAL TERMINAL" />
+  <meta property="og:description" content="A retro-futuristic portfolio terminal." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📟%3C/text%3E%3C/svg%3E" />
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="flicker"></div>
+
+  <!-- boot screen -->
+  <div id="boot">
+    <div id="boot-content"></div>
+    <div class="skip-hint">[ ESC TO SKIP ]</div>
+  </div>
+
+  <!-- main app -->
+  <div id="app">
+
+    <div class="header">
+      <div class="brand">ROBCO INDUSTRIES (TM) — TERMLINK PROTOCOL — <b>PIP-BOY 3000</b></div>
+      <div class="right" id="clock">--:--</div>
+    </div>
+
+    <nav class="tabs" id="tabs">
+      <div class="tab active" data-tab="status"    ><span class="num">1</span>STATUS</div>
+      <div class="tab"        data-tab="skills"    ><span class="num">2</span>SKILLS</div>
+      <div class="tab"        data-tab="projects"  ><span class="num">3</span>PROJECTS</div>
+      <div class="tab"        data-tab="experience"><span class="num">4</span>EXPERIENCE</div>
+      <div class="tab"        data-tab="contact"   ><span class="num">5</span>CONTACT</div>
+    </nav>
+
+    <div class="panes">
+
+      <!-- == STATUS == -->
+      <div class="pane active" data-pane="status">
+        <div class="row">
+          <div class="col" style="flex: 0 0 240px;">
+            <div class="vault-card" data-label="VAULT DWELLER">
+              <pre class="vault-boy" id="vault-boy">
+       ___
+      /   \
+     | o o |
+     |  ▽  |
+      \___/
+     __|_|__
+    /   |   \
+   |   /|\   |
+   |  / | \  |
+    \_/  \_/
+     |    |
+     |    |
+    _|    |_
+   |__|  |__|
+              </pre>
+              <p style="text-align:center; font-size:15px; margin: 6px 0 0; color: var(--fg-dim);">
+                ⟪ <span id="us-name">NAME</span> ⟫<br/>
+                LVL <span id="us-level">--</span> · <span id="us-role">--</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <h1 id="hero-name">VAULT DWELLER</h1>
+            <p id="hero-bio">[ bio loads from USER_DATA ]</p>
+
+            <div class="vault-card" data-label="S.P.E.C.I.A.L.">
+              <ul class="special-list" id="special-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- == SKILLS == -->
+      <div class="pane" data-pane="skills">
+        <h1>// SKILLS</h1>
+        <p style="color: var(--fg-dim);">Languages, frameworks, and tools I work with.</p>
+        <div id="inv-sections"></div>
+      </div>
+
+      <!-- == PROJECTS == -->
+      <div class="pane" data-pane="projects">
+        <h1>// PROJECTS</h1>
+        <p style="color: var(--fg-dim);">Click through for details.</p>
+        <div id="quest-list"></div>
+      </div>
+
+      <!-- == EXPERIENCE == -->
+      <div class="pane" data-pane="experience">
+        <h1>// Education and work history.</h1>
+        <p style="color: var(--fg-dim);">Career path. Each marker = territory entered.</p>
+        <div class="timeline" id="timeline"></div>
+      </div>
+
+      <!-- == CONTACT == -->
+      <div class="pane" data-pane="contact">
+        <h1>// CONTACT</h1>
+        <p style="color: var(--fg-dim);">Get in touch!</p>
+        <div id="radio-list"></div>
+      </div>
+
+    </div>
+
+    <!-- terminal -->
+    <div class="terminal">
+      <div class="terminal-out" id="term-out"></div>
+      <div class="term-input-row">
+        <span class="term-prompt">dweller@pip-boy:~$</span>
+        <input id="term-input" type="text" autocomplete="off" spellcheck="false" autofocus />
+      </div>
+    </div>
+
+    <div class="statusbar">
+      <div>
+        <span class="meter">HP <b id="meter-hp">100/100</b></span> &nbsp;
+        <span class="meter">AP <b>90/90</b></span> &nbsp;
+        <span class="meter">RAD <b>0</b></span> &nbsp;
+        <span class="meter">CAPS <b id="meter-caps">2287</b></span>
+      </div>
+      <div>
+        <span style="color: var(--fg);">[ press <b style="color:var(--fg-bright)">/</b> to focus terminal · type <b style="color:var(--fg-bright)">help</b> ]</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- data.js must load before app.js (USER_DATA is referenced there) -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
