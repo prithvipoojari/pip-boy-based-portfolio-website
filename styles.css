@@ -308,14 +308,13 @@ a:hover { background: var(--fg); color: var(--bg-deep); text-shadow: none; }
   color: var(--fg-bright);
 }
 
-.vault-boy {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 11px;
-  line-height: 1.0;
-  white-space: pre;
-  color: var(--fg-bright);
-  text-align: center;
-  margin: 0;
+.me-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--fg-dim);
+  filter: grayscale(0.3) contrast(1.05);
+  margin: 0 auto;
 }
 
 

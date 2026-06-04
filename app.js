@@ -419,5 +419,6 @@ window.addEventListener("keydown", (e) => {
 
 
 // == INIT ==========================================
+document.body.classList.add("theme-amber");
 renderAll();
 renderBoot();
