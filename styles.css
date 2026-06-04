@@ -13,7 +13,7 @@
   --fg-faint:     rgba(74, 250, 123, 0.18);
   --glow:         rgba(74, 250, 123, 0.55);
   --glow-soft:    rgba(74, 250, 123, 0.22);
-  --scanline:     rgba(0, 0, 0, 0.28);
+  --scanline: rgba(0, 0, 0, 0.10);
   --warn:         #ffb84a;
   --err:          #ff5a5a;
 }
@@ -60,8 +60,8 @@ html, body {
   min-height: 100vh;
   background: var(--bg-deep);
   color: var(--fg);
-  font-family: 'VT323', 'Share Tech Mono', monospace;
-  font-size: 20px;
+  font-family: 'JetBrains Mono', 'Share Tech Mono', monospace;
+  font-size: 16px;
   line-height: 1.35;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -183,7 +183,7 @@ body::after {
   letter-spacing: 0.08em;
 }
 .header .brand b { color: var(--fg-bright); }
-.header .right { color: var(--fg-dim); }
+.header .right { color: var(--fg-bright); }
 
 .tabs {
   display: flex;
@@ -459,8 +459,8 @@ a:hover { background: var(--fg); color: var(--bg-deep); text-shadow: none; }
   border: none;
   outline: none;
   color: var(--fg-bright);
-  font-family: 'VT323', monospace;
-  font-size: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
   caret-color: var(--fg-bright);
 }
 

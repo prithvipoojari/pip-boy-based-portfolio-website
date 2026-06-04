@@ -5,24 +5,18 @@
 
 // == BOOT SEQUENCE ==========================================
 const bootLines = [
-  "ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-  "COPYRIGHT 2075-2077 ROBCO INDUSTRIES",
-  "-Server 6-",
+  "Initializing Personal Portfolio...",
   "",
-  "Initializing PIP-BOY 3000 personal information processor...",
+  "RAM CHECK ......................... [ OK ]",
+  "ROM CHECK ......................... [ OK ]",
+  "STORAGE ........................... [ OK ]",
+  "CONNECTION ........................ [ ESTABLISHED ]",
   "",
-  "RAM CHECK ......................... [ 64 KB OK ]",
-  "ROM CHECK ......................... [ 32 KB OK ]",
-  "STORAGE ........................... [ HOLO-DRIVE OK ]",
-  "GEIGER COUNTER .................... [ CALIBRATED ]",
-  "BIOMETRIC LINK .................... [ ESTABLISHED ]",
-  "VAULT-NET CONNECTION .............. [ HANDSHAKE OK ]",
-  "",
-  "Mounting /dev/holotape0 ........... [ OK ]",
+  "Mounting data ........... [ OK ]",
   "Loading personnel manifest ........ [ OK ]",
-  "Decrypting quest log .............. [ OK ]",
-  "",
-  "Welcome back, dweller.",
+  "Decrypting .............. [ OK ]",
+  " ",
+  "Greetings user!",
   "Press any key to continue."
 ];
 
@@ -86,9 +80,6 @@ function escapeHTML(s) {
 function renderStatus() {
   document.getElementById("hero-name").textContent = USER_DATA.name;
   document.getElementById("hero-bio").textContent  = USER_DATA.bio;
-  document.getElementById("us-name").textContent   = USER_DATA.name;
-  document.getElementById("us-level").textContent  = USER_DATA.level;
-  document.getElementById("us-role").textContent   = USER_DATA.role;
 
   document.getElementById("special-list").innerHTML = USER_DATA.special.map(s => `
     <li>
@@ -220,8 +211,7 @@ function termPrint(text, cls = "") {
 }
 
 function printTerminalIntro() {
-  termPrint("PIP-BOY 3000 :: Personal Terminal — TERMLINK v2.5", "echo");
-  termPrint(`Logged in as ${USER_DATA.name.toLowerCase().replace(/[^a-z0-9]+/g, "")}@pip-boy`, "echo");
+  termPrint("Logged in as user@prithvi's-personal-portfolio", "echo");
   termPrint(`Type 'help' for available commands. Type 'about' to start.`, "echo");
   termPrint("");
 }
@@ -364,7 +354,7 @@ COMMANDS.dir = COMMANDS.ls;
 function execCommand(raw) {
   const line = raw.trim();
   if (!line) return;
-  termPrint(`dweller@pip-boy:~$ ${line}`, "echo");
+  termPrint(`user@prithvi's-personal-portfolio:~$ ${line}`, "echo");
 
   const parts = line.split(/\s+/);
   const cmd = parts[0].toLowerCase();
