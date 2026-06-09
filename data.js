@@ -111,13 +111,28 @@ const USER_DATA = {
 
   // == TIMELINE (Map / career history) ==========================================
   timeline: [
-    { when: "2026 — PRESENT", what: "Master of Science in Computer Science",               where: "Northeastern University · Khoury College of Computer Sciences · Boston, MA", 
+    { when: "Jan 2026 — PRESENT", what: "Master of Science in Computer Science",               where: "Northeastern University · Khoury College of Computer Sciences · Boston, MA", 
       details: [
         "GPA: 3.834 / 4.0",
         "Relevant Coursework: Programming Design Paradigm, Database Management Systems",
       ], },
-    { when: "2023 — 2024",    what: "DATA SCIENCE & SCRUM MANAGER INTERN",       where: "Hackveda Limited · Delhi, India" },
-    { when: "2020 — 2024",    what: "BE ELECTRONICS & COMPUTER SCIENCE", where: "University of Mumbai · India" },
+    {
+      when: "August 2024 — July 2025",
+      what: "Technical Operations and Client Support Associate",
+      where: "Shree Marikamba Solutions Pvt. Ltd. (SMSPL) · Navi Mumbai, India (Hybrid)",
+      details: [
+        "Assisting with site visits and field support activities for CCTV surveillance projects.",
+        "Configuring surveillance devices for site installation by technicians.",
+        "Marking camera placement locations, quantities, and device types on AutoCAD-generated floor layouts based on manual survey details to support CCTV installation activities.",
+        "Supporting customer interactions and attending to client inquiries at the business location.",
+        "Visiting a client site to explain implemented GPS tracking software solutions and gather customer feedback, queries and enhancement requirements.",
+        "Documenting client concerns and communicating requirements for follow-up actions and software modifications.",
+        "Assisting with inventory monitoring and stock checking to support operations.",
+        "Supporting coordination activities across operational, technical, and client-facing functions as required.",
+      ],
+    },
+    { when: "June 2023 — February 2024",    what: "Data Science and Scrum Manager Intern",       where: "Hackveda Limited · Delhi, India (Remote)" },
+    { when: "June 2020 — June 2024",    what: "Bachelor of Engineering in Electronics and Computer Science", where: "University of Mumbai · India" },
   ],
 
 
