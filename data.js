@@ -131,8 +131,20 @@ const USER_DATA = {
         "Supporting coordination activities across operational, technical, and client-facing functions as required.",
       ],
     },
-    { when: "June 2023 — February 2024",    what: "Data Science and Scrum Manager Intern",       where: "Hackveda Limited · Delhi, India (Remote)" },
-    { when: "June 2020 — June 2024",    what: "Bachelor of Engineering in Electronics and Computer Science", where: "University of Mumbai · India" },
+    { when: "June 2023 — February 2024",    what: "Data Science and Scrum Manager Intern",       where: "Hackveda Limited · Delhi, India (Remote)", 
+      details: [
+        "Developed a Future Location Prediction System using Dataiku deployed on an AWS EC2 instance, building predictive models from the provided dataset.",
+        "Implemented Exploratory Data Analysis (EDA) for Credit Card Fraud Detection using correlation analysis and outlier detection to identify significant variables and anomalies; applied PCA for feature importance and t-SNE to visualize transaction clusters for improved anomaly detection.",
+        "Analyzed student performance data to identify patterns and correlations, building a predictive model to support data-driven decision making.",
+        "Facilitated agile ceremonies as part of the scrum team, ensuring smooth sprint planning and delivery.",
+        "Led remote orientation webinars introducing incoming intern cohorts to the company and helping new members get oriented.",
+        "Reviewed and gave feedback on interns’ project presentations during scrum meetings to support their progress.",
+      ] },
+    { when: "June 2020 — June 2024",    what: "Bachelor of Engineering in Electronics and Computer Science", where: "University of Mumbai · India",
+      details: [
+        "GPA: 7.75 / 10.0",
+      ]
+     },
   ],
 
 
